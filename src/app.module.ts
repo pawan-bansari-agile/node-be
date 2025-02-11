@@ -9,7 +9,7 @@ import { User } from './user.entity';
   imports: [
     TypeOrmModule.forRoot({
       type: 'mysql',
-      host: 'test-db.ctcmqkco6h9r.ap-south-1.rds.amazonaws.com', // e.g., database-1.abcdefg.us-east-1.rds.amazonaws.com
+      host: 'test-mysql.ctcmqkco6h9r.ap-south-1.rds.amazonaws.com', // e.g., database-1.abcdefg.us-east-1.rds.amazonaws.com
       port: 3306,
       username: 'admin',
       password: 'Agile#1357',
