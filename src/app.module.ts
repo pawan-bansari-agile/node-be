@@ -13,7 +13,7 @@ import { User } from './user.entity';
       port: 3306,
       username: 'admin',
       password: 'Agile#1357',
-      database: 'your-database',
+      database: 'your_database',
       entities: [User], // Add your entities here
       synchronize: true, // Set to false in production
     }),
