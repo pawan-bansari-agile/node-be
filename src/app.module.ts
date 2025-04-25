@@ -3,17 +3,21 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { User } from './user.entity';
+import { ConfigModule } from '@nestjs/config';
 // import { DatabaseService } from '../src/database.service'; // Ensure this file exists
 
 @Module({
   imports: [
+    ConfigModule.forRoot({
+      isGlobal: true, // Makes env available everywhere
+    }),
     TypeOrmModule.forRoot({
       type: 'mysql',
-      host: 'test-mysql.ctcmqkco6h9r.ap-south-1.rds.amazonaws.com', // e.g., database-1.abcdefg.us-east-1.rds.amazonaws.com
+      host: process.env.DB_HOST, // e.g., database-1.abcdefg.us-east-1.rds.amazonaws.com
       port: 3306,
-      username: 'admin',
-      password: 'Agile#1357',
-      database: 'your_database',
+      username: process.env.DB_USER,
+      password: process.env.DB_PASSWORD,
+      database: process.env.DB_NAME,
       entities: [User], // Add your entities here
       synchronize: true, // Set to false in production
     }),
