@@ -2,7 +2,8 @@
 #FROM reg-harbor.agiletechnologies.in/agile_node18.13.0_alpine/agile_node18.13.0_alpine:latest
 # FROM 622298325867.dkr.ecr.ap-south-1.amazonaws.com/base-node:latest
 FROM node:18
-RUN apk --no-cache add curl
+# RUN apk --no-cache add curl
+RUN apt-get install -y curl
 
 ####################################
 #  Create Directory               #
