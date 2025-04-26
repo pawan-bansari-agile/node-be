@@ -5,6 +5,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { User } from './user.entity';
 import { ConfigModule } from '@nestjs/config';
 // import { DatabaseService } from '../src/database.service'; // Ensure this file exists
+// testing triggers
 
 @Module({
   imports: [
